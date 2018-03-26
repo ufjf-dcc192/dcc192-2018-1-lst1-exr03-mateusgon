@@ -68,9 +68,9 @@ public class JurosServlet extends HttpServlet {
                 valor05 = calculaValor (j,  0.005, valor05);
                 valor1 = calculaValor (j, 0.010, valor1);
                 valor15 = calculaValor (j, 0.015, valor15);
-                out.println ("<td>" + valor05 + "</td>");
-                out.println ("<td> " + valor1 + "  </td>");
-                out.println ("<td>" + valor15 + "  </td>");
+                out.println (String.format("<td>%.2f</td>", valor05 ));
+                out.println (String.format("<td>%.2f</td>", valor1 ));
+                out.println (String.format("<td>%.2f</td>", valor15 ));
                 if (porcentJuros != 0.01)
                 {
                     valorUsuario = calculaValor (j, porcentJuros, valorUsuario);
